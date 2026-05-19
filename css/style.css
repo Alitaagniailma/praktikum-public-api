@@ -1004,4 +1004,256 @@ a:focus {
 .footer_section .footer-info p a {
   color: inherit;
 }
+
+.box {
+  transition: all 0.3s ease;
+}
+
+.box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+.box:hover img {
+  transform: scale(1.1);
+}
+
+.box img {
+  transition: 0.3s;
+}
+
+/* =========================
+   CUSTOM MODERN EFFECT
+========================= */
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Body Gradient */
+body {
+  background: #f8f9fa;
+}
+
+/* Navbar Blur */
+.header_section {
+  position: relative;
+  z-index: 99;
+  backdrop-filter: blur(8px);
+}
+
+/* HERO TEXT ANIMATION */
+.slider_section .detail-box h1 {
+  animation: fadeDown 1s ease;
+}
+
+.slider_section .detail-box p {
+  animation: fadeUp 1.2s ease;
+}
+
+/* BUTTON EFFECT */
+.btn1,
+.order_online,
+.food_section .btn-box a,
+.about_section .detail-box a,
+.book_section .form_container button {
+  transition: 0.3s ease;
+}
+
+.btn1:hover,
+.order_online:hover,
+.food_section .btn-box a:hover,
+.about_section .detail-box a:hover,
+.book_section .form_container button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(255, 190, 51, 0.4);
+}
+
+/* FILTER MENU MODERN */
+.filters_menu li {
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.filters_menu li:hover {
+  background: #ffbe33;
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* CARD MODERN */
+.food_section .box {
+  transition: 0.4s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.food_section .box:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 35px rgba(0,0,0,0.25);
+}
+
+/* IMAGE EFFECT */
+.food_section .box .img-box {
+  overflow: hidden;
+}
+
+.food_section .box .img-box img {
+  transition: 0.4s ease;
+}
+
+.food_section .box:hover .img-box img {
+  transform: scale(1.12) rotate(2deg);
+}
+
+/* TITLE */
+.food_section .detail-box h5 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+/* DESCRIPTION */
+.food_section .detail-box p {
+  color: #d6d6d6;
+  line-height: 1.7;
+}
+
+/* PRICE */
+.food_section .options h6 {
+  font-size: 22px;
+  color: #ffbe33;
+  font-weight: bold;
+}
+
+/* ICON CART */
+.food_section .options a {
+  transition: 0.3s ease;
+}
+
+.food_section .options a:hover {
+  transform: rotate(15deg) scale(1.15);
+  background: white;
+}
+
+.food_section .options a:hover i {
+  color: #ffbe33;
+}
+
+/* ABOUT SECTION */
+.about_section {
+  position: relative;
+  overflow: hidden;
+}
+
+.about_section::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: rgba(255,190,51,0.08);
+  border-radius: 50%;
+  top: -100px;
+  right: -100px;
+}
+
+/* FOOTER */
+.footer_section {
+  position: relative;
+}
+
+.footer_section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, #ffbe33, #ff9800);
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f242d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffbe33;
+  border-radius: 10px;
+}
+
+/* ANIMATION */
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+  .slider_section .detail-box h1 {
+    font-size: 2.5rem;
+  }
+
+  .food_section .detail-box h5 {
+    font-size: 18px;
+  }
+
+  .food_section .options h6 {
+    font-size: 18px;
+  }
+
+}
+
+/* LOADING */
+
+.loading {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #eee;
+  border-top: 6px solid #ffbe33;
+  border-radius: 50%;
+  margin: auto;
+  animation: spin 1s linear infinite;
+}
+
+.loading p {
+  margin-top: 15px;
+  font-weight: 600;
+  color: #222831;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /*# sourceMappingURL=style.css.map */
